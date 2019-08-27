@@ -1,0 +1,5 @@
+flex exp.l
+bison -d exp.y
+gcc -c lex.yy.c exp.tab.c
+gcc -o com.out lex.yy.c exp.tab.c
+./com.out
