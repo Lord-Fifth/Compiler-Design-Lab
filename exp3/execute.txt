@@ -1,4 +1,4 @@
-lex exp.l
-yacc -d exp.y
-gcc y.tab.c lex.yy.c -w
+flex exp3.l
+bison -d -b y exp3.y
+gcc y.tab.c -ll -ly -w
 ./a.out

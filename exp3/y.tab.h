@@ -45,27 +45,15 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    LETTER = 258,
-    NUMBER = 259
+    ID = 258,
+    NUM = 259,
+    UMINUS = 260
   };
 #endif
-/* Tokens.  */
-#define LETTER 258
-#define NUMBER 259
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-
-union YYSTYPE
-{
-#line 23 "exp3.y" /* yacc.c:1909  */
-
-char symbol;
-
-#line 66 "y.tab.h" /* yacc.c:1909  */
-};
-
-typedef union YYSTYPE YYSTYPE;
+typedef int YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif
