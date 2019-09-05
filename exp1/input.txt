@@ -1,6 +1,12 @@
+import numpy as np
+
 def hello (x):
 	x=9
 	return 9
 
-x = 18
+x = 18 #123
 print 3
+
+while(i<0)
+	i = i-1
+	print i

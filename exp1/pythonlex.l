@@ -19,6 +19,7 @@
 
 [a-z]([a-z]|[0-9])*	  { fprintf(fp," TOKEN<IDENTIFIER> "); }
 [+|-|*|%|/|=|(|)|:|<|<=|>=|>|==|\"] 		  { fprintf(fp,"TOKEN<%s> ",yytext);   } 
+[#](.)* {}
 
 [0-9][0-9]* { fprintf(fp," TOKEN<NUMBER> " );		 	}
 [\n]    {  fprintf(fp,"\n");					}
