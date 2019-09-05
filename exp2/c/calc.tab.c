@@ -1,8 +1,8 @@
-/* A Bison parser, made by GNU Bison 3.0.2.  */
+/* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Bison implementation for Yacc-like parsers in C
 
-   Copyright (C) 1984, 1989-1990, 2000-2013 Free Software Foundation, Inc.
+   Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@
 #define YYBISON 1
 
 /* Bison version.  */
-#define YYBISON_VERSION "3.0.2"
+#define YYBISON_VERSION "3.0.4"
 
 /* Skeleton name.  */
 #define YYSKELETON_NAME "yacc.c"
@@ -110,7 +110,7 @@ extern int yydebug;
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef union YYSTYPE YYSTYPE;
+
 union YYSTYPE
 {
 #line 11 "calc.y" /* yacc.c:355  */
@@ -119,6 +119,8 @@ int integer ;
 
 #line 121 "calc.tab.c" /* yacc.c:355  */
 };
+
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif
@@ -132,7 +134,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 136 "calc.tab.c" /* yacc.c:358  */
+#line 138 "calc.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -1205,47 +1207,47 @@ yyreduce:
         case 2:
 #line 21 "calc.y" /* yacc.c:1646  */
     { printf("RESULT=%d\n",(yyvsp[-1].integer)); exit(0); 	}
-#line 1209 "calc.tab.c" /* yacc.c:1646  */
+#line 1211 "calc.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
 #line 23 "calc.y" /* yacc.c:1646  */
     { (yyval.integer) =(yyvsp[-2].integer)+(yyvsp[0].integer);	}
-#line 1215 "calc.tab.c" /* yacc.c:1646  */
+#line 1217 "calc.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
 #line 24 "calc.y" /* yacc.c:1646  */
     { (yyval.integer) =(yyvsp[-2].integer)-(yyvsp[0].integer);	}
-#line 1221 "calc.tab.c" /* yacc.c:1646  */
+#line 1223 "calc.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
 #line 25 "calc.y" /* yacc.c:1646  */
     { (yyval.integer) =(yyvsp[-2].integer)*(yyvsp[0].integer);	}
-#line 1227 "calc.tab.c" /* yacc.c:1646  */
+#line 1229 "calc.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
 #line 26 "calc.y" /* yacc.c:1646  */
     { (yyval.integer) = (yyvsp[-2].integer)/(yyvsp[0].integer);	}
-#line 1233 "calc.tab.c" /* yacc.c:1646  */
+#line 1235 "calc.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
 #line 27 "calc.y" /* yacc.c:1646  */
     { (yyval.integer) =(yyvsp[-1].integer);	}
-#line 1239 "calc.tab.c" /* yacc.c:1646  */
+#line 1241 "calc.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
 #line 28 "calc.y" /* yacc.c:1646  */
     { (yyval.integer)=(yyvsp[0].integer);	}
-#line 1245 "calc.tab.c" /* yacc.c:1646  */
+#line 1247 "calc.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1249 "calc.tab.c" /* yacc.c:1646  */
+#line 1251 "calc.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires

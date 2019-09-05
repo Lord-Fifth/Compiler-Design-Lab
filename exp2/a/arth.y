@@ -1,35 +1,45 @@
 %{
-	#include<stdlib.h>
+
 	#include<stdio.h>
+	#include<stdlib.h>
 
 	extern int yylex();
 	void yyerror(char *s);
+
 %}
 
 %start start
-%token NUMBER ID
+%token NUMBER ID 
 
 %left '+' '-'
 %left '*' '/'
+%left '%'
+
 %%
+start : exp ';'    { printf("Valid arithmetic expression\n"); exit(0); } 
 
-start : expr ';' 		{ printf("Valid arithmetic expression\n"); }
+exp :   NUMBER 	   {;}
+    	| ID	   {;}
+	| exp '+' exp  {;}
+	| exp '-' exp  {;}
+	| exp '*' exp  {;}
+	| exp '/' exp  {;}
+	| '(' exp ')'  {;}
+	| exp '%' exp  {;}
+	| '-' exp      {;}
+	;
 
-expr : NUMBER 
-      | ID
-      | expr '+' expr
-      | expr '-' expr
-      | expr '*' expr 
-      | expr '/' expr 	
-      | '(' expr ')'   {;}
 %%
 
 void yyerror(char *s)
 {
- fprintf(stdout,"INVALID ARITHMETIC EXPRESSION");
+
+	fprintf(stdout,"Invalid expression\n");
+
 }
 
 int main()
 {
- yyparse();
+
+	yyparse();
 }
