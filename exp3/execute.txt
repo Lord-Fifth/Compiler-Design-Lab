@@ -1,0 +1,4 @@
+flex exp3.l
+bison -d -b y exp3.y
+gcc y.tab.c -ll -ly -w
+./a.out
