@@ -1,6 +1,6 @@
 /*
    Program Name : Program to develop an operator precedence parser for a given language.
-   Author : NANDU O (R7) 
+   Author : Aditya Suresh (R7) 
 */
 #include<stdio.h>
 #include<string.h>
