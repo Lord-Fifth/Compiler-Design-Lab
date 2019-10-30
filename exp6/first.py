@@ -1,6 +1,6 @@
 '''
 	Program to simulate first and follow
-   Author : Aditya Suresh (R7) 
+   	Author : Aditya Suresh (R7) 
 '''
 
 productions = ["S=TW","W=+TW","W=#","T=FX","X=*FX","X=#","F=(S)","F=i" ] 
