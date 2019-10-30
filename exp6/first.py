@@ -1,7 +1,6 @@
 '''
-	First and Follow of  a grammar
-	Jacob James K
-	Roll No  :31 
+	Program to simulate first and follow
+   Author : Aditya Suresh (R7) 
 '''
 
 productions = ["S=TW","W=+TW","W=#","T=FX","X=*FX","X=#","F=(S)","F=i" ] 
@@ -215,3 +214,26 @@ def main():
 if __name__ =="__main__":
     main()
 
+'''
+OUTPUT
+FIRST SET OF GRAMMAR SYMBOLS 
+
+_______________________________
+
+W---> {'+', '#'}
+S---> {'(', 'i'}
+T---> {'(', 'i'}
+X---> {'#', '*'}
+F---> {'(', 'i'}
+
+
+FOLLOW SET OF GRAMMAR SYMBOLS 
+
+_____________________________________
+
+W---> {')', '$'}
+S---> {')', '$'}
+T---> {'+', ')', '$'}
+X---> {'+', ')', '$'}
+F---> {'+', '$', ')', '*'}
+'''
