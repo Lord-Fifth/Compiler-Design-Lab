@@ -1,3 +1,5 @@
+/* Program to implement compiler back-end and convert to Three-Address Code in 8086 Architecture
+   Author : Aditya Suresh (R7) */
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
