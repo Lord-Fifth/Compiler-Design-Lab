@@ -86,18 +86,17 @@ GRAMMAR is E->E+E
  E->(E) 
  E->id
 enter input string 
-i+i*i+(i+i)
-stack 	 input 	    action
+id+id*id
+stack 	 input 	 action
 
-$i	 +i*i+(i+i)$	SHIFT->symbols
-$i+	  i*i+(i+i)$	SHIFT->symbols
-$i+i	   *i+(i+i)$	SHIFT->symbols
-$i+i*	    i+(i+i)$	SHIFT->symbols
-$i+i*i	     +(i+i)$	SHIFT->symbols
-$i+i*i+	      (i+i)$	SHIFT->symbols
-$i+i*i+(	       i+i)$	SHIFT->symbols
-$i+i*i+(i	        +i)$	SHIFT->symbols
-$i+i*i+(i+	         i)$	SHIFT->symbols
-$i+i*i+(i+i	          )$	SHIFT->symbols
-$i+i*i+(i+i)	           $	SHIFT->symbols
+$id	  +id*id$	SHIFT->id
+$E	  +id*id$	REDUCE TO E
+$E+	   id*id$	SHIFT->symbols
+$E+id	     *id$	SHIFT->id
+$E+E	     *id$	REDUCE TO E
+$E	     *id$	REDUCE TO E
+$E*	      id$	SHIFT->symbols
+$E*id	        $	SHIFT->id
+$E*E	        $	REDUCE TO E
+$E	        $	REDUCE TO E
 */
